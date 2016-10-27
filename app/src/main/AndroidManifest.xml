@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comvoroninlevan.instagram.www.inventorytracker">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".InventoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemsActivity"
+            android:label="@string/itemsActivity"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <activity
+        android:name=".ItemEditor"
+        android:label="@string/itemsActivity"
+        android:parentActivityName=".ItemsActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ItemsActivity" />
+    </activity>
+        <activity
+            android:name=".ItemDetails"
+            android:label="@string/detailedInfo"
+            android:parentActivityName=".ItemsActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ItemsActivity" />
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/historyName"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".SuppliersActivity"
+            android:label="@string/suppliersName"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".CustomerActivity"
+            android:label="@string/customersName"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".SaleActivity"
+            android:label="@string/saleName"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".PurchaseActivity"
+            android:label="@string/purchaseName"
+            android:parentActivityName=".InventoryActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryActivity" />
+        </activity>
+        <provider
+            android:name=".data.Provider"
+            android:authorities="comvoroninlevan.instagram.www.inventorytracker"
+            android:exported="false" />
+    </application>
+
+</manifest>
